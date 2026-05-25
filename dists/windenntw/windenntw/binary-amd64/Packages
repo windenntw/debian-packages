@@ -1,0 +1,132 @@
+Package: barto-m68k-amiga-elf-toolchain
+Architecture: amd64
+Version: 20260525
+Maintainer: winden <windenntw@gmail.com>
+Filename: dists/windenntw/windenntw/binary-amd64/barto-m68k-amiga-elf-toolchain_20260525_amd64.deb
+Size: 47253988
+MD5sum: dbc35400f15e79acd61884a12273dc2f
+SHA1: 95caa7de93759fe28a6fb4f0c30b8926fdd6ce16
+SHA256: d1deb5f1cd3dd98ee02829e6e4d10235c2e6eb4686709aa97f7c929132f911c9
+SHA512: c0a2e989488f63146a77a77c39c3ac890838eeffc4341e0f9ff8f9c0e66547c4d82853aab7437a47f602f03dfe2a712be84d832796263b1beeaef6da209d8c44
+Description: Bartman m68k-amiga-elf toolchain for Amiga
+
+Package: hdfmonkey-dbgsym
+Architecture: amd64
+Version: 0.4.1
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: hdfmonkey
+Maintainer: Matt Westcott <matt@west.co.tt>
+Installed-Size: 77
+Depends: hdfmonkey (= 0.4.1)
+Filename: dists/windenntw/windenntw/binary-amd64/hdfmonkey-dbgsym_0.4.1_amd64.deb
+Size: 61764
+MD5sum: 4da40ef14a63f6eb9d4fab06becb4e2f
+SHA1: 9c5549df1eddad01e1aaf0c18ff0ae5aa41b480f
+SHA256: 83a98112ac40680b7a7edc0161d2a2e6cc98cc1450b2954c5d8d858d7bf20819
+SHA512: 4ffbdad5e3bd276e8089a348b84bb6f5615c8a2a9062cae4d53e5b243470455d92062ba3e734f002683e18b73835cfecd38f1b0582202ea1169c266ebbcb9bd5
+Description: debug symbols for hdfmonkey
+Build-Ids: 4d653fc206b37ee79a2024a0780db61ae03b1107
+
+Package: hdfmonkey
+Architecture: amd64
+Version: 0.4.1
+Priority: optional
+Section: otherosfs
+Maintainer: Matt Westcott <matt@west.co.tt>
+Installed-Size: 70
+Depends: debconf
+Filename: dists/windenntw/windenntw/binary-amd64/hdfmonkey_0.4.1_amd64.deb
+Size: 26800
+MD5sum: 633907b91a3b68b5653f495ece28ca5b
+SHA1: 4cb97a4b7b4b4c85d5342e1a8411a495bec2fc52
+SHA256: aa6bfdd2db8c0ec9dbba2bbc5b65ea45c5bd9dc041e9244a7f3ecbaf822b373b
+SHA512: c398a6e42dd95a06b3d90feb112ee4c9532261cb5180ac773e964bd9a4242b0454f5827a9d0fe19a92e5ccc7ca580ae7ea6837326651b107899fc3a0cdc8f358
+Homepage: https://github.com/gasman/hdfmonkey
+Description: A Swiss Army Knife for working with FAT partitions on Spectrum emulator HDF images.
+
+Package: taptools-dbgsym
+Architecture: amd64
+Version: 1.0.4
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: taptools
+Maintainer: winden <windenntw@gmail.com>
+Installed-Size: 184
+Depends: taptools (= 1.0.4)
+Filename: dists/windenntw/windenntw/binary-amd64/taptools-dbgsym_1.0.4_amd64.deb
+Size: 94476
+MD5sum: 4b614cee9a05e36f02a9b2c1cb4eb22e
+SHA1: 916341473567e480f6080966ddcf1ba1e845498e
+SHA256: 81dad44b09451bfcb773138bb6503a8a8e2a905ffb9576cdb390c926503b0fc8
+SHA512: d031218458661d56f0ccdcec0500320db4bc61fd9b19ff1306b07b9732defa1125a252c425e4d9fcda73b4100714bcadbc196952026cb434d3bf97cfd0ddc0df
+Description: debug symbols for taptools
+Build-Ids: 1b7804ef2e94bb54abfd4d220d724e9d0e0a9ae6 2b9725b580a27bc8475d4608b778f53c7844d2d5 39294bf866e772abc7120a318b56f783cdb86282 5d905bcd7433ff94c7199a0f035da30476d8b190 6734005e03b5955a0a83ae5d1210f5fca2ec38ab 75414a75275def1a83f3fcfad97c28a54a632ef1 9713e35621f63514fdda30dde2f6b869d7169bdc 9a6fc72b2d1e1e6aa94642d955019d2a0e8b4a39 b2a8c29533b211fafbcbe0e3c3e259c0221c3890 bbe85c401bb8a37f37318fb314a8c33c1454eeda
+
+Package: taptools-dbgsym
+Architecture: amd64
+Version: 1.0.8
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: taptools
+Maintainer: winden <windenntw@gmail.com>
+Installed-Size: 231
+Depends: taptools (= 1.0.8)
+Filename: dists/windenntw/windenntw/binary-amd64/taptools-dbgsym_1.0.8_amd64.deb
+Size: 124252
+MD5sum: d3e73201252d2b5faf320c777c7dc87b
+SHA1: 9e232d57827d15d4c53f8cf2e4111290a30018fa
+SHA256: c4701154f4497029995f23f1385b45d83dccd0304cfa6a8da7cec7b8c13f1f4c
+SHA512: 7f58a2aeec5fbbd433f76d4b417e02e7ae8b114590f4a6e9057f4cf6d7381d34848f998028afe282446431cc8613867bbb1d95611c8a6f3e5be87953fa7cdc62
+Description: debug symbols for taptools
+Build-Ids: 0b4dd9de4529d3c25b2ac8911e7bfbac85621b7d 0ce9dba0f3f02671c7fb9dcf612e7ab0e2fff58d 39294bf866e772abc7120a318b56f783cdb86282 5d905bcd7433ff94c7199a0f035da30476d8b190 6734005e03b5955a0a83ae5d1210f5fca2ec38ab 7a827ef0099d1d27a45c4f0c4b44271fa8dcdd41 9713e35621f63514fdda30dde2f6b869d7169bdc 9a6fc72b2d1e1e6aa94642d955019d2a0e8b4a39 a395ccca31f168b87902406d961f0bba3e216315 b2a8c29533b211fafbcbe0e3c3e259c0221c3890 b60137d021005a43e4103cdea59c28e4e4e202a6 bbe85c401bb8a37f37318fb314a8c33c1454eeda
+
+Package: taptools
+Architecture: amd64
+Version: 1.0.4
+Priority: optional
+Section: otherosfs
+Maintainer: winden <windenntw@gmail.com>
+Installed-Size: 178
+Depends: debconf, libdsk4
+Filename: dists/windenntw/windenntw/binary-amd64/taptools_1.0.4_amd64.deb
+Size: 27036
+MD5sum: df1ee602e130d0be554ef0f4383360db
+SHA1: 3fdd989ef2ed8ea39cf25d17889aad952ecdbf20
+SHA256: 2b40d63490978c726dd7310eef185f48938eaf11704b1fedc6713208f232afef
+SHA512: 14b03fc61207846d2cd6bcf352e0b2befe30542f00f84d3f3c29e5d432d8a92df60444b37c6c7f45247a447f8bdb0b45399b93e2b686df186845a8280682c353
+Homepage: http://www.seasip.info/ZX/unix.html
+Description: Tool to fiddle with the .TAP files used by ZX Spectrum emulators like RealSpectrum, Z80 and many others.
+
+Package: taptools
+Architecture: amd64
+Version: 1.0.8
+Priority: optional
+Section: otherosfs
+Maintainer: winden <windenntw@gmail.com>
+Installed-Size: 223
+Depends: debconf, libdsk4
+Filename: dists/windenntw/windenntw/binary-amd64/taptools_1.0.8_amd64.deb
+Size: 35680
+MD5sum: 0c8843ccaab2f1fe5417539184a7dbeb
+SHA1: afdba2b4f7bfc3d6dba91b70f926469b385da270
+SHA256: a972276fc2af7c9f15b43a804880e158a16753a9a0ede3afaf998e7aaeeb2563
+SHA512: 1717e42b381906c69dad3f2d51bbe06045e632d8176fcee9f3a073133df71b5d72bef52cc717f54d3f2c988acfd8d75c8ca19e16acdcdea3acaefeca121c0298
+Homepage: http://www.seasip.info/ZX/unix.html
+Description: Tool to fiddle with the .TAP files used by ZX Spectrum emulators like RealSpectrum, Z80 and many others.
+
+Package: vasm-vlink-vbcc-m68k-toolchain
+Architecture: amd64
+Version: 20260525
+Maintainer: windenntw <windenntw@gmail.com>
+Filename: dists/windenntw/windenntw/binary-amd64/vasm-vlink-vbcc-m68k-toolchain_20260525_amd64.deb
+Size: 1234272
+MD5sum: 843d3bdc040a15349abe72a543f8ef39
+SHA1: da874c8722eca4d85a93c9a0e03260b0343bda47
+SHA256: b70b15f5e00289a1c38284ddcb8bb7e78750dce7a50d7577fe3fc6e73618494d
+SHA512: c2f0d5dc97c2346e058fbb8dd4af5a24f01ce6369d442cc1d6e99af1e26f3c0af7d813b701b69383d5f7fdf290fb723755ed09d777f5040b5c2298194a177d3a
+Description: vasm-vlink-vbcc m68k toolchain for Amiga
+

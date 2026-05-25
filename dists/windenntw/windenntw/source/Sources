@@ -1,0 +1,54 @@
+Package: hdfmonkey
+Format: 3.0 (native)
+Binary: hdfmonkey
+Architecture: any
+Version: 0.4.1
+Maintainer: Matt Westcott <matt@west.co.tt>
+Standards-Version: 4.0.0
+Build-Depends: autoconf, automake
+Homepage: https://github.com/gasman/hdfmonkey
+Vcs-Browser: https://github.com/gasman/hdfmonkey
+Vcs-Git: https://github.com/gasman/hdfmonkey
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ hdfmonkey deb otherosfs optional arch=any
+Files:
+ 4d465d3301225dd3bc4890d7fccfa6f3 660 hdfmonkey_0.4.1.dsc
+ a214d3fb928eb3c0ddcfc7f427db9c74 51228 hdfmonkey_0.4.1.tar.xz
+Checksums-Sha1:
+ fc85237401895adb60fb31e01e99d0d465e4e557 660 hdfmonkey_0.4.1.dsc
+ 50007c1b3b227e0b97c1d1d7a038d39f89d51c79 51228 hdfmonkey_0.4.1.tar.xz
+Checksums-Sha256:
+ efd9b6e981c8c94d75999e25f22843c6f08b6e57e96bcfd1a205f6496e53a7ec 660 hdfmonkey_0.4.1.dsc
+ 281c044efce5a5c0e58e31caac136c5bb7b321062f7d2a98bd0c172b29a68c2c 51228 hdfmonkey_0.4.1.tar.xz
+Checksums-Sha512:
+ 9defe82afd6af50873cb75b61a0a04704a405343e6fbf193bcff85d37f99ab3885bdcd47d9cd861a99dff6ee5bcba7e70eef53853ccfd9067aaffa2a17d8f207 660 hdfmonkey_0.4.1.dsc
+ b2c47f8c019d9474d04a54983dee082f129ee16d2353a8404951fa856dec34a8ba178f3fdfdbb6b4f093912d1d8264cbae59ced59bc665df02ffedf5695d8a93 51228 hdfmonkey_0.4.1.tar.xz
+
+Package: taptools
+Format: 3.0 (native)
+Binary: taptools
+Architecture: any
+Version: 1.0.8
+Maintainer: John Elliott <seasip.webmaster@gmail.com>
+Standards-Version: 4.0.0
+Build-Depends: autoconf, automake, libdsk4-dev
+Homepage: http://www.seasip.info/ZX/unix.html
+Vcs-Browser: https://github.com/windenntw/TapTools
+Vcs-Git: https://github.com/windenntw/TapTools
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ taptools deb otherosfs optional arch=any
+Files:
+ 936cd979ed6b9d4c1d25a4c0fc446376 681 taptools_1.0.8.dsc
+ 0f43eafa4c4c2e62f29b627a71e007bd 77828 taptools_1.0.8.tar.xz
+Checksums-Sha1:
+ e41266e28560b442e25d513d656f49d693cddfc2 681 taptools_1.0.8.dsc
+ 1aca82e4ca1e0f64c0c9cde72aa203faba069632 77828 taptools_1.0.8.tar.xz
+Checksums-Sha256:
+ d2e3b74e14750abc1e918f0de820d4f6da659f16e355f174c0ac0c9d041ada71 681 taptools_1.0.8.dsc
+ d16a15ca50545cf3bd9e5ab086e02110ba4d0ab5d993de2e134755cd7f29c3da 77828 taptools_1.0.8.tar.xz
+Checksums-Sha512:
+ 0158378c7e0d55696bb21b9ee02af396bfaf355e7019e03238ceef1beb3d735c39b54bf7de8390253cb197dca63792ab27d14ab05edfc56e3d82690a66aad815 681 taptools_1.0.8.dsc
+ 23b26208293ebe2752d10c9794dd21afe6e6647ca23f0435fdf008e257888674ab1686da2ddccac88dbd06c37caa86d4e558567bdfee7a856233f31dd9e0af25 77828 taptools_1.0.8.tar.xz
+
