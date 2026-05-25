@@ -7,7 +7,8 @@ To enable a debian machine to use this local package repo:
 
 ```
 $ cat <<EOF >/etc/apt/sources.list.d/windenntw-debian-packages.list 
-deb [trusted=yes] http://windenntw.github.io/debian-packages binaries/
+deb     [trusted=yes] http://windenntw.github.io/debian-packages binaries/
+deb-src [trusted=yes] http://windenntw.github.io/debian-packages source/
 EOF
 ```
 
