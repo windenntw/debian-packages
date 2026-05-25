@@ -30,8 +30,8 @@ generate_repo_info() {
     cat <<EOF > "$dir_name/Release"
 Origin: windenntw
 Label: windenntw
-Suite: windenntw
-Codename: windenntw
+Suite: $dir_name/
+Codename: $dir_name/
 Architectures: $arch
 Date: $(date -Ru)
 SHA256:
