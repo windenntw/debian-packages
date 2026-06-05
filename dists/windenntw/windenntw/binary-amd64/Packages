@@ -33,6 +33,18 @@ SHA256: d1deb5f1cd3dd98ee02829e6e4d10235c2e6eb4686709aa97f7c929132f911c9
 SHA512: c0a2e989488f63146a77a77c39c3ac890838eeffc4341e0f9ff8f9c0e66547c4d82853aab7437a47f602f03dfe2a712be84d832796263b1beeaef6da209d8c44
 Description: Bartman m68k-amiga-elf toolchain for Amiga
 
+Package: google-antigravity-ide
+Architecture: amd64
+Version: 2.0.4
+Maintainer: windenntw <windenntw@gmail.com>
+Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-ide_2.0.4_amd64.deb
+Size: 170417328
+MD5sum: 6cb3ed5ff56896d45a60ca9dc6cfaac6
+SHA1: 0e7f4c973e2e83fef549b9cf7db158dd5ca5df29
+SHA256: 1204615c2e9a92f5ead0cdc2e5e8945e4f10dc8a9f54c0b207c06a54835b1711
+SHA512: c9b5778a3cf9ea834d1eb8e4724b114f42fecd209bddd10ed4e6fd754c740177c50578e82bb37a731ed876ce2eea406ed5f361c6b3a380230dc4c32ab3aa55d9
+Description: Antigravity IDE from Google.
+
 Package: hdfmonkey-dbgsym
 Architecture: amd64
 Version: 0.4.1
