@@ -8,8 +8,8 @@ Standards-Version: 4.6.2
 Package-List:
  google-antigravity-ide deb devel optional arch=amd64
 Checksums-Sha1:
- 971940cdf995858ec8dd2c222f255c8f648e1d39 245948 google-antigravity-ide_2.8.0.tar.xz
+ 4f9bcd1a79a2a1fdbc348c8acacc6145a4100e1c 705824 google-antigravity-ide_2.8.0.tar.xz
 Checksums-Sha256:
- dc59969ff4e33430436812e5eb6563ba52f67c3c22cf25be4628653c39cc0cc7 245948 google-antigravity-ide_2.8.0.tar.xz
+ 3b86594088dca71c868fa149c7d747b32d37e8812342a2a182c2ba166bc5ee66 705824 google-antigravity-ide_2.8.0.tar.xz
 Files:
- 92a72cc403db19f75daa8a40b8e6d09f 245948 google-antigravity-ide_2.8.0.tar.xz
+ 71e23c3b1063bafc546161ad39930f96 705824 google-antigravity-ide_2.8.0.tar.xz
