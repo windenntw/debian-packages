@@ -1,3 +1,72 @@
+Package: google-antigravity-app
+Format: 3.0 (native)
+Binary: google-antigravity-app
+Architecture: amd64
+Version: 2.34.0
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ google-antigravity-app deb devel optional arch=amd64
+Files:
+ 3aa8fd6e4252f106031be9f9eeebaa45 571 google-antigravity-app_2.34.0.dsc
+ 5c356382f56bc2ca777c89283bcfd4bd 245936 google-antigravity-app_2.34.0.tar.xz
+Checksums-Sha1:
+ 50b6a078ae763094206de25eda1d09587b92ddc7 571 google-antigravity-app_2.34.0.dsc
+ 6482c21b8f3349313fd4159ecc2234daff716660 245936 google-antigravity-app_2.34.0.tar.xz
+Checksums-Sha256:
+ 0500324d142aced03bb174059844e3d0b1eb04b11b59e0510b13a68c75161232 571 google-antigravity-app_2.34.0.dsc
+ 61c7e71972c0adc06d58d665fb586b66ad2722f2a8f6cfc0a3efb91536e7dff9 245936 google-antigravity-app_2.34.0.tar.xz
+Checksums-Sha512:
+ b1a45bb2c1d62c418ff1ea1a4aa65e3abc329d639f2b893cb433abfedece058d3b3f2d76b6f3bdc6f355712af406e7214d24145125cd3650d36f9e0ca1e03250 571 google-antigravity-app_2.34.0.dsc
+ 86e6d43f1bc4cf3d1e3e54612dd6d850e803f9d8a7bf3a6270452a410150668ea66e49c56c6d3f5938faeb9c901045d0844326aac63e25ee6c3d5c6aa6b207ae 245936 google-antigravity-app_2.34.0.tar.xz
+
+Package: google-antigravity-cli
+Format: 3.0 (native)
+Binary: google-antigravity-cli
+Architecture: amd64
+Version: 1.5.14
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ google-antigravity-cli deb devel optional arch=amd64
+Files:
+ f462909bc94799942b23f58075523e17 565 google-antigravity-cli_1.5.14.dsc
+ a7fe357f92feffc99ad9bb53253db6aa 1400 google-antigravity-cli_1.5.14.tar.xz
+Checksums-Sha1:
+ a32fa7ffdb1f7a3fe678847f2bd050f1edea89cf 565 google-antigravity-cli_1.5.14.dsc
+ d7baeecf1fc4c59323e2f8a2928da8a38a194ecf 1400 google-antigravity-cli_1.5.14.tar.xz
+Checksums-Sha256:
+ e5b8d79fe7e03f15f797a0e45581a77ac43713fa5fea47ff824ccdf092a64778 565 google-antigravity-cli_1.5.14.dsc
+ 2efe9825e354dadd698eecabd3c5f6857594e3cb3b7cc3d72e7279a7037ce5e7 1400 google-antigravity-cli_1.5.14.tar.xz
+Checksums-Sha512:
+ 8df28e96e7bc638d232a6be2667aa61a948397f5fbe020e86da028b981a67f2450af5a2f1737222e5541daec7e99b1bb77e72628ac13232e7ca6fd463f4d0f58 565 google-antigravity-cli_1.5.14.dsc
+ 7e569d76e484f2b732042ebe3867aa748ab4c5e4db60945a9735f3b55f9c3a3cc4afe06524a3a66660727acdf9075d8f924339aa66993af7c31638b44b5560ae 1400 google-antigravity-cli_1.5.14.tar.xz
+
+Package: google-antigravity-ide
+Format: 3.0 (native)
+Binary: google-antigravity-ide
+Architecture: amd64
+Version: 2.8.0
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ google-antigravity-ide deb devel optional arch=amd64
+Files:
+ 997ab4387a776cd9b205f43bcfeb816e 567 google-antigravity-ide_2.8.0.dsc
+ 92a72cc403db19f75daa8a40b8e6d09f 245948 google-antigravity-ide_2.8.0.tar.xz
+Checksums-Sha1:
+ 4255a5ab4404c694b54024903e15f69db4bfceb4 567 google-antigravity-ide_2.8.0.dsc
+ 971940cdf995858ec8dd2c222f255c8f648e1d39 245948 google-antigravity-ide_2.8.0.tar.xz
+Checksums-Sha256:
+ 1c53e13f0b89ceaeebfee710722b9e562242bce9201ecbbc4f91d4190c8f16e0 567 google-antigravity-ide_2.8.0.dsc
+ dc59969ff4e33430436812e5eb6563ba52f67c3c22cf25be4628653c39cc0cc7 245948 google-antigravity-ide_2.8.0.tar.xz
+Checksums-Sha512:
+ 8eb045247958727a6da91944310df2531586554be1e5745652e7d51f59072eeb96f2203455acd80beac3dcc1f099ca0c3ec0480322d9d0b72bad9652879c0cb4 567 google-antigravity-ide_2.8.0.dsc
+ c94c7594768088deccb05aec411961118e008bac6901f8a0323fec371a83945d184e45fd359b5bd62920ef184a345b78f64c27d25162e748cd5c470085a0b678 245948 google-antigravity-ide_2.8.0.tar.xz
+
 Package: hdfmonkey
 Format: 3.0 (native)
 Binary: hdfmonkey
