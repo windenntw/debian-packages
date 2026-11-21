@@ -39,11 +39,11 @@ Version: 2.34.0-1
 Maintainer: windenntw <windenntw@gmail.com>
 Depends: curl, ca-certificates
 Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-app_2.34.0-1_amd64.deb
-Size: 245860
-MD5sum: eebc0153a90488f6436c312fb6757491
-SHA1: afc0b3370ab16593a46ac82d4166c9d7c8010bd9
-SHA256: ffeab27ffa3efcec42da7df9adeda484b735056588c0d14cbf4f816c4b8c0564
-SHA512: 70db1a6c61f71ba4885ff5d63e0a4b07ea41a086e7819d47dd1c09c65754b1e04b32f84afd84d1ba543b116ea04b625f15f21e691f5b30e9976824b1245beb6d
+Size: 245864
+MD5sum: 6f4516a33cadd08148a7824c83fd758a
+SHA1: 3ee1487e4aa804374536c805c2513777c308e596
+SHA256: c3dc8706cdf8499741c72e9cb29cc159edd996517922163f8ef261ca43c38d87
+SHA512: 4fae0a5e8b89ed2ae8a5bc2be094f34f94c6365ec2ed0d415e679d9c945d40ce497ec1c377294819fb96d9e1ee9bea1c27ea5801348844cca055e66c400e8c3e
 Description: Antigravity App from Google (installer).
  Downloads and installs Antigravity App from Google during package installation.
 
@@ -54,10 +54,10 @@ Maintainer: windenntw <windenntw@gmail.com>
 Depends: curl, ca-certificates
 Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-cli_1.5.14-1_amd64.deb
 Size: 577204
-MD5sum: bb5878b445aeda0470ffcdd1570b81f1
-SHA1: d9cc9954e0ef623d11ed059fc9843a0ab45d35a8
-SHA256: be38b9053d6ce859ae2a86dabbe538f97637002af35d7d7a4c2c026cf23f6de5
-SHA512: 3648e0a5b9f441421f3bf33761dc87fc633ed4e72617ef5866a05c4ec2ccc1799ffa7cd69f75a8c1c9ca7f977eaff221e9aec4643ab2266deae2308684e5c586
+MD5sum: 4847fe253b17dc376bedfdcb5ea90f61
+SHA1: 8e7c569174a4d3e5dbe41a5142457474cd6fa77b
+SHA256: bc046d97440782a7c7c5d30d014c1d54d8310aa00f3bd912c98341c07852959d
+SHA512: 98b280faf988f91603f108428110ffebfe6bec120fea9ac0bbf5168db49b1dfae9e2a39e744d33c3910649637395d6bfb9a17e2b0a0c32a58e3302abc2da3d22
 Description: Antigravity CLI from Google (installer).
  Downloads and installs Antigravity CLI (agy) from Google during package installation.
 
@@ -68,10 +68,10 @@ Maintainer: windenntw <windenntw@gmail.com>
 Depends: curl, ca-certificates
 Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-ide_2.8.0-1_amd64.deb
 Size: 705764
-MD5sum: 0509c0c712500ace3df3666916e1aab0
-SHA1: ab191f1f778cfdba6fb7f5f7a717cf3bbb864994
-SHA256: f0c0e23fa8102237ff179125e24bb546ea5bbc0997c666218db8fe9b5985a581
-SHA512: 22e5b55c30e4bca19fca7b6736ca1582da7ac4e3a508ae52eedb386d7d18f5f454c7b949e573dd845fdbb8610f99db0e4af9348254d3b0e3f5ab599fed6e25e4
+MD5sum: 5125aae153331f8f27365e4519a531ab
+SHA1: c3ddfdc6c22f9d1f0b25dda80867afd7edf055ca
+SHA256: 8a977ed7c771f431370075fb9e4aeba8f1b38c600ccc30079f0d0a4679ba326e
+SHA512: 9f44c947df01dbea2efa722fb71ce8f9824f1e832c213b38da0efe6f9d964bcfadc3430aece997fe98b1e98b0d8dd9f50d853807e099772f819d436c04e3f6d9
 Description: Antigravity IDE from Google (installer).
  Downloads and installs Antigravity IDE from Google during package installation.
 
