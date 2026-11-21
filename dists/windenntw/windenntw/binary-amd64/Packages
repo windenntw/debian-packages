@@ -33,17 +33,19 @@ SHA256: d1deb5f1cd3dd98ee02829e6e4d10235c2e6eb4686709aa97f7c929132f911c9
 SHA512: c0a2e989488f63146a77a77c39c3ac890838eeffc4341e0f9ff8f9c0e66547c4d82853aab7437a47f602f03dfe2a712be84d832796263b1beeaef6da209d8c44
 Description: Bartman m68k-amiga-elf toolchain for Amiga
 
-Package: google-antigravity-ide
+Package: google-antigravity-app
 Architecture: amd64
-Version: 2.0.4
+Version: 2.34.0
 Maintainer: windenntw <windenntw@gmail.com>
-Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-ide_2.0.4_amd64.deb
-Size: 170417328
-MD5sum: 6cb3ed5ff56896d45a60ca9dc6cfaac6
-SHA1: 0e7f4c973e2e83fef549b9cf7db158dd5ca5df29
-SHA256: 1204615c2e9a92f5ead0cdc2e5e8945e4f10dc8a9f54c0b207c06a54835b1711
-SHA512: c9b5778a3cf9ea834d1eb8e4724b114f42fecd209bddd10ed4e6fd754c740177c50578e82bb37a731ed876ce2eea406ed5f361c6b3a380230dc4c32ab3aa55d9
-Description: Antigravity IDE from Google.
+Depends: curl, ca-certificates
+Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-app_2.34.0_amd64.deb
+Size: 245856
+MD5sum: 51278a191c9b8885f2061eaf14b43414
+SHA1: 158a63794160e2fdeb0805071a444e62b1cee302
+SHA256: 576e4c20099f0a119eda14abc78f348ca456bf9f75243b81e3567565c7616524
+SHA512: 395fdce7038061dd66138c155d2925a58fe4c0f021a94b418385d593e9300b5d6ec25f39cc9747c90fdf7d0d486b80ec72487923e6cd121d9778b8fee1ef3d2c
+Description: Antigravity App from Google (installer).
+ Downloads and installs Antigravity App from Google during package installation.
 
 Package: hdfmonkey-dbgsym
 Architecture: amd64
