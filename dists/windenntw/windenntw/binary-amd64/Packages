@@ -47,6 +47,20 @@ SHA512: 395fdce7038061dd66138c155d2925a58fe4c0f021a94b418385d593e9300b5d6ec25f39
 Description: Antigravity App from Google (installer).
  Downloads and installs Antigravity App from Google during package installation.
 
+Package: google-antigravity-cli
+Architecture: amd64
+Version: 1.5.14
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates
+Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-cli_1.5.14_amd64.deb
+Size: 1340
+MD5sum: 991bd15753f904339cbf0657b279537e
+SHA1: 79522bdf075f1e9a652292ab991ca89e1481fff1
+SHA256: a5d173277dc02257b6eaa797ef7d1a914c85b1d8283075f862c899d02bb0fe2d
+SHA512: da97e5b4c5251426716690f206562209bb2afe6e42718e6390d6e93bbc211df8296479bf2a1d9ae43c315430a22b8f01453ed757ecef7429825ab700e1838359
+Description: Antigravity CLI from Google (installer).
+ Downloads and installs Antigravity CLI (agy) from Google during package installation.
+
 Package: hdfmonkey-dbgsym
 Architecture: amd64
 Version: 0.4.1
