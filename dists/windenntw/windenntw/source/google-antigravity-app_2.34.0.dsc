@@ -8,8 +8,8 @@ Standards-Version: 4.6.2
 Package-List:
  google-antigravity-app deb devel optional arch=amd64
 Checksums-Sha1:
- 6482c21b8f3349313fd4159ecc2234daff716660 245936 google-antigravity-app_2.34.0.tar.xz
+ c1dfafe26ff35e82a07b27e6742c08b5242b50dc 245944 google-antigravity-app_2.34.0.tar.xz
 Checksums-Sha256:
- 61c7e71972c0adc06d58d665fb586b66ad2722f2a8f6cfc0a3efb91536e7dff9 245936 google-antigravity-app_2.34.0.tar.xz
+ b3aeab8cf97c3372e143056336491699bbaf77ffc2b6d18b99f3c3853c41ef8e 245944 google-antigravity-app_2.34.0.tar.xz
 Files:
- 5c356382f56bc2ca777c89283bcfd4bd 245936 google-antigravity-app_2.34.0.tar.xz
+ ef6d4f0ae2c32640dd33a466012c9a30 245944 google-antigravity-app_2.34.0.tar.xz
