@@ -61,6 +61,20 @@ SHA512: da97e5b4c5251426716690f206562209bb2afe6e42718e6390d6e93bbc211df8296479bf
 Description: Antigravity CLI from Google (installer).
  Downloads and installs Antigravity CLI (agy) from Google during package installation.
 
+Package: google-antigravity-ide
+Architecture: amd64
+Version: 2.8.0
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates
+Filename: dists/windenntw/windenntw/binary-amd64/google-antigravity-ide_2.8.0_amd64.deb
+Size: 245880
+MD5sum: 5d10582419ecfb7922a149c5373745ac
+SHA1: f64e45eb696c364176037df4da4cfc61800f9564
+SHA256: f250af1bf99e1e4b4cee2367c8ae46b96eb26fe6090e527f0b96056373d0f159
+SHA512: 9270fa60e1967079591814b361d9e4ccecff398344d17a5d8c302cc8f87121385d668b87a345567cf38d11c118f8b338c6113679ab57dfa83a879cba34d20490
+Description: Antigravity IDE from Google (installer).
+ Downloads and installs Antigravity IDE from Google during package installation.
+
 Package: hdfmonkey-dbgsym
 Architecture: amd64
 Version: 0.4.1
