@@ -35,6 +35,7 @@ function cleanup1() {
 trap cleanup1 EXIT
 
 # 3. Stage control file and maintainer scripts for Debian.
+DATE=$(LC_ALL=C date -R)
 shopt -u patsub_replacement 2>/dev/null || true
 render_template() {
     local src="$1"
@@ -45,6 +46,7 @@ render_template() {
     content=${content//@UPSTREAM_URL@/${UPSTREAM_URL}}
     content=${content//@SHA512@/${SHA512}}
     content=${content//@BINARY_PATH@/${BINARY_PATH}}
+    content=${content//@DATE@/${DATE}}
     printf '%s\n' "${content}" > "${dst}"
 }
 
@@ -69,3 +71,32 @@ OUTDIR="${SCRIPT_DIR}/dists/windenntw/windenntw/binary-amd64"
 mkdir -p "${OUTDIR}"
 dpkg-deb --root-owner-group --build "${ROOTDIR}" "${OUTDIR}/${DEBNAME}"
 dpkg -c "${OUTDIR}/${DEBNAME}"
+
+# 6. Stage and build Debian native source package.
+SRCDIR="${TMPDIR}/google-antigravity-cli-${VERSION}"
+mkdir -p "${SRCDIR}/debian/source"
+chmod 0755 "${SRCDIR}" "${SRCDIR}/debian" "${SRCDIR}/debian/source"
+
+render_template "${SRC_DIR}/debian/control" "${SRCDIR}/debian/control"
+chmod 0644 "${SRCDIR}/debian/control"
+
+render_template "${SRC_DIR}/debian/changelog" "${SRCDIR}/debian/changelog"
+chmod 0644 "${SRCDIR}/debian/changelog"
+
+cp "${SRC_DIR}/debian/source/format" "${SRCDIR}/debian/source/format"
+chmod 0644 "${SRCDIR}/debian/source/format"
+
+cp "${SRC_DIR}/debian/rules" "${SRCDIR}/debian/rules"
+chmod 0755 "${SRCDIR}/debian/rules"
+
+cp "${ROOTDIR}/DEBIAN/postinst" "${SRCDIR}/debian/postinst"
+chmod 0755 "${SRCDIR}/debian/postinst"
+
+cp "${ROOTDIR}/DEBIAN/postrm" "${SRCDIR}/debian/postrm"
+chmod 0755 "${SRCDIR}/debian/postrm"
+
+SOURCE_OUTDIR="${SCRIPT_DIR}/dists/windenntw/windenntw/source"
+mkdir -p "${SOURCE_OUTDIR}"
+(cd "${TMPDIR}" && dpkg-source -b "google-antigravity-cli-${VERSION}")
+mv "${TMPDIR}/google-antigravity-cli_${VERSION}.dsc" "${SOURCE_OUTDIR}/"
+mv "${TMPDIR}/google-antigravity-cli_${VERSION}.tar.xz" "${SOURCE_OUTDIR}/"

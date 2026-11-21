@@ -1,0 +1,12 @@
+Source: google-antigravity-cli
+Section: devel
+Priority: optional
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: google-antigravity-cli
+Architecture: amd64
+Depends: curl, ca-certificates
+Description: Antigravity CLI from Google (installer).
+ Downloads and installs Antigravity CLI (agy) from Google during package installation.

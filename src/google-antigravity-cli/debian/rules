@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+PKG := google-antigravity-cli
+STAGING := debian/$(PKG)
+
+.PHONY: clean build build-arch build-indep binary binary-arch binary-indep
+
+clean:
+	rm -rf $(STAGING) debian/files
+
+build build-arch build-indep:
+
+binary-indep:
+
+binary-arch:
+	rm -rf $(STAGING)
+	install -d -m 0755 $(STAGING)/DEBIAN
+	install -m 0755 debian/postinst $(STAGING)/DEBIAN/postinst
+	install -m 0755 debian/postrm $(STAGING)/DEBIAN/postrm
+	dpkg-gencontrol -p$(PKG) -P$(STAGING)
+	chmod 0644 $(STAGING)/DEBIAN/control
+	dpkg-deb --root-owner-group --build $(STAGING) ..
+
+binary: binary-arch binary-indep
