@@ -90,6 +90,9 @@ chmod 0644 "${PKG_SRC_DIR}/debian/changelog"
 cp "${SRC_DIR}/debian/rules" "${PKG_SRC_DIR}/debian/rules"
 chmod 0755 "${PKG_SRC_DIR}/debian/rules"
 
+cp "${SRC_DIR}/debian/install" "${PKG_SRC_DIR}/debian/install"
+chmod 0644 "${PKG_SRC_DIR}/debian/install"
+
 render_template "${SRC_DIR}/DEBIAN/postinst" "${PKG_SRC_DIR}/debian/postinst"
 chmod 0755 "${PKG_SRC_DIR}/debian/postinst"
 
