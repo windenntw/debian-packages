@@ -6,7 +6,7 @@ set -x
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 UPSTREAM_URL="https://storage.googleapis.com/antigravity-public/antigravity-hub/2.34.0-5887025308631040/linux-x64/Antigravity.tar.gz"
 VERSION="2.34.0"
-REVISION="1"
+REVISION="2"
 DEB_VERSION="${VERSION}-${REVISION}"
 DATE=$(LC_ALL=C date -R)
 

@@ -6,7 +6,7 @@ set -x
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 UPSTREAM_URL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.8.0-6733682917113856/linux-x64/Antigravity%20IDE.tar.gz"
 VERSION="2.8.0"
-REVISION="1"
+REVISION="2"
 DEB_VERSION="${VERSION}-${REVISION}"
 DATE=$(LC_ALL=C date -R)
 

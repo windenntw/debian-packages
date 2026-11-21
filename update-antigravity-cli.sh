@@ -26,7 +26,7 @@ fi
 TMPDIR=$(mktemp -d)
 ROOTDIR="${TMPDIR}/root"
 BINARY_PATH="/usr/bin/agy"
-REVISION="1"
+REVISION="2"
 DEB_VERSION="${VERSION}-${REVISION}"
 DEBNAME="google-antigravity-cli_${DEB_VERSION}_amd64.deb"
 
