@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+PKG := google-antigravity-app
+STAGE := debian/$(PKG)
+
+.PHONY: clean build build-arch build-indep binary binary-arch binary-indep
+
+clean:
+	rm -rf $(STAGE) debian/files
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+binary: binary-indep binary-arch
+binary-indep:
+
+binary-arch:
+	rm -rf $(STAGE)
+	install -d -m 0755 $(STAGE)/DEBIAN
+	install -m 0755 debian/postinst $(STAGE)/DEBIAN/postinst
+	install -m 0755 debian/postrm $(STAGE)/DEBIAN/postrm
+	install -d -m 0755 $(STAGE)/usr/share/pixmaps
+	install -m 0644 usr/share/pixmaps/google-antigravity-app.png $(STAGE)/usr/share/pixmaps/google-antigravity-app.png
+	install -d -m 0755 $(STAGE)/usr/share/applications
+	install -m 0644 usr/share/applications/google-antigravity-app.desktop $(STAGE)/usr/share/applications/google-antigravity-app.desktop
+	dpkg-gencontrol -p$(PKG) -P$(STAGE)
+	chmod 0644 $(STAGE)/DEBIAN/control
+	dpkg-deb --root-owner-group --build $(STAGE) ..

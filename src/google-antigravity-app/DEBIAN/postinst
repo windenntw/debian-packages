@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+        TMPDIR=$(mktemp -d)
+        trap 'rm -rf "$TMPDIR"' EXIT
+
+        echo "Downloading Antigravity App @VERSION@..."
+        curl -fSL "@UPSTREAM_URL@" -o "${TMPDIR}/antigravity-linux-amd64.tar.gz"
+
+        mkdir -p "${TMPDIR}/unpack"
+        tar --no-same-owner -xf "${TMPDIR}/antigravity-linux-amd64.tar.gz" -C "${TMPDIR}/unpack"
+
+        rm -rf "@INSTALLDIR@"
+        if [ -x "${TMPDIR}/unpack/antigravity" ]; then
+            mv "${TMPDIR}/unpack" "@INSTALLDIR@"
+        else
+            set -- "${TMPDIR}/unpack"/*
+            if [ "$#" -eq 1 ] && [ -d "$1" ]; then
+                mv "$1" "@INSTALLDIR@"
+            else
+                mv "${TMPDIR}/unpack" "@INSTALLDIR@"
+            fi
+        fi
+        ;;
+esac

@@ -1,0 +1,7 @@
+Package: google-antigravity-app
+Version: @VERSION@
+Architecture: amd64
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates
+Description: Antigravity App from Google (installer).
+ Downloads and installs Antigravity App from Google during package installation.

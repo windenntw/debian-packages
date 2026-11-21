@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Antigravity App
+Comment=Experience liftoff
+Exec="@INSTALLDIR@/antigravity" "%F"
+Icon=/usr/share/pixmaps/google-antigravity-app.png
+Type=Application
+StartupNotify=false
+StartupWMClass=Antigravity
+Categories=Development;Utility;
+Terminal=False

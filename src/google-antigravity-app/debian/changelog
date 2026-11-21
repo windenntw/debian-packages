@@ -1,0 +1,5 @@
+google-antigravity-app (@VERSION@) windenntw; urgency=medium
+
+  * Release @VERSION@ installer package.
+
+ -- windenntw <windenntw@gmail.com>  @DATE@

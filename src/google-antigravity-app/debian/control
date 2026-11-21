@@ -1,0 +1,12 @@
+Source: google-antigravity-app
+Section: devel
+Priority: optional
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: google-antigravity-app
+Architecture: amd64
+Depends: curl, ca-certificates
+Description: Antigravity App from Google (installer).
+ Downloads and installs Antigravity App from Google during package installation.
