@@ -105,6 +105,9 @@ chmod 0644 "${SRCDIR}/debian/source/include-binaries"
 cp "${SRC_DIR}/debian/rules" "${SRCDIR}/debian/rules"
 chmod 0755 "${SRCDIR}/debian/rules"
 
+cp "${SRC_DIR}/debian/install" "${SRCDIR}/debian/install"
+chmod 0644 "${SRCDIR}/debian/install"
+
 cp "${ROOTDIR}/DEBIAN/postinst" "${SRCDIR}/debian/postinst"
 chmod 0755 "${SRCDIR}/debian/postinst"
 

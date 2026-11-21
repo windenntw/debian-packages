@@ -1,28 +1,3 @@
 #!/usr/bin/make -f
-
-PKG := google-antigravity-cli
-STAGING := debian/$(PKG)
-
-.PHONY: clean build build-arch build-indep binary binary-arch binary-indep
-
-clean:
-	rm -rf $(STAGING) debian/files
-
-build build-arch build-indep:
-
-binary-indep:
-
-binary-arch:
-	rm -rf $(STAGING)
-	install -d -m 0755 $(STAGING)/DEBIAN
-	install -m 0755 debian/postinst $(STAGING)/DEBIAN/postinst
-	install -m 0755 debian/postrm $(STAGING)/DEBIAN/postrm
-	install -d -m 0755 $(STAGING)/usr/share/pixmaps
-	install -m 0644 debian/usr/share/pixmaps/google-antigravity-cli.png $(STAGING)/usr/share/pixmaps/google-antigravity-cli.png
-	install -d -m 0755 $(STAGING)/usr/share/applications
-	install -m 0644 debian/usr/share/applications/google-antigravity-cli.desktop $(STAGING)/usr/share/applications/google-antigravity-cli.desktop
-	dpkg-gencontrol -p$(PKG) -P$(STAGING)
-	chmod 0644 $(STAGING)/DEBIAN/control
-	dpkg-deb --root-owner-group --build $(STAGING) ..
-
-binary: binary-arch binary-indep
+%:
+	dh $@
