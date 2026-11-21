@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+PKG := google-antigravity-ide
+BUILD_DIR := debian/$(PKG)
+
+clean:
+	rm -rf $(BUILD_DIR) debian/files
+
+build: build-arch build-indep
+build-arch:
+build-indep:
+
+binary: binary-arch binary-indep
+binary-indep:
+binary-arch: build-arch
+	rm -rf $(BUILD_DIR)
+	install -d -m 0755 $(BUILD_DIR)/DEBIAN
+	install -m 0755 debian/postinst $(BUILD_DIR)/DEBIAN/postinst
+	install -m 0755 debian/postrm $(BUILD_DIR)/DEBIAN/postrm
+	install -d -m 0755 $(BUILD_DIR)/usr/share/applications
+	install -m 0644 usr/share/applications/google-antigravity-ide.desktop $(BUILD_DIR)/usr/share/applications/google-antigravity-ide.desktop
+	install -d -m 0755 $(BUILD_DIR)/usr/share/pixmaps
+	install -m 0644 usr/share/pixmaps/google-antigravity-ide.png $(BUILD_DIR)/usr/share/pixmaps/google-antigravity-ide.png
+	dpkg-gencontrol -P$(BUILD_DIR)
+	chmod 0644 $(BUILD_DIR)/DEBIAN/control
+	dpkg-deb --root-owner-group --build $(BUILD_DIR) ..
+
+.PHONY: clean build build-arch build-indep binary binary-arch binary-indep

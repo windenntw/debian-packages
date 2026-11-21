@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Antigravity IDE
+Comment=Experience liftoff
+Exec="@INSTALLDIR@/antigravity-ide" "%F"
+Icon=/usr/share/pixmaps/google-antigravity-ide.png
+Type=Application
+StartupNotify=false
+StartupWMClass=Antigravity IDE
+Categories=Development;Utility;
+Terminal=False

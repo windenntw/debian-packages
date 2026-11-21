@@ -1,0 +1,7 @@
+Package: google-antigravity-ide
+Version: @VERSION@
+Architecture: amd64
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates
+Description: Antigravity IDE from Google (installer).
+ Downloads and installs Antigravity IDE from Google during package installation.

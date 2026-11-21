@@ -1,0 +1,12 @@
+Source: google-antigravity-ide
+Section: devel
+Priority: optional
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: google-antigravity-ide
+Architecture: amd64
+Depends: curl, ca-certificates
+Description: Antigravity IDE from Google (installer).
+ Downloads and installs Antigravity IDE from Google during package installation.
