@@ -8,8 +8,8 @@ Standards-Version: 4.6.2
 Package-List:
  google-antigravity-cli deb devel optional arch=amd64
 Checksums-Sha1:
- d7baeecf1fc4c59323e2f8a2928da8a38a194ecf 1400 google-antigravity-cli_1.5.14.tar.xz
+ 2ca70102f93516e37ef3a2efeeb5026e7cf178f5 577264 google-antigravity-cli_1.5.14.tar.xz
 Checksums-Sha256:
- 2efe9825e354dadd698eecabd3c5f6857594e3cb3b7cc3d72e7279a7037ce5e7 1400 google-antigravity-cli_1.5.14.tar.xz
+ 010923ff3d3c7a188b588468ff8d3557c48546abf8077642b9b7f814f9852660 577264 google-antigravity-cli_1.5.14.tar.xz
 Files:
- a7fe357f92feffc99ad9bb53253db6aa 1400 google-antigravity-cli_1.5.14.tar.xz
+ e887e4f402c4f5a1ef3e544e57937daf 577264 google-antigravity-cli_1.5.14.tar.xz
