@@ -20,7 +20,7 @@ package (`.dsc`, `.debian.tar.xz`, `.orig.tar.xz`) in `dists/windenntw/windenntw
    - Archive layout (single binary vs. directory) and target install path
      (`/usr/bin/<name>` for CLI tools, `/opt/<App>-${VERSION}-linux-amd64` for apps/IDEs)
    - Required runtime dependencies (`curl, ca-certificates`, etc.)
-2. Set `REVISION="1"` and `DEB_VERSION="${VERSION}-${REVISION}"` in `update-<pkg>.sh`.
+2. Set `REVISION="1"` and `DEB_VERSION="${VERSION}-${REVISION}"` in `update-<pkg>.sh` for a new upstream release (see **Updating an Existing Package** below for when to bump or reset `REVISION`).
 
 ## 2. Create `src/<pkg>/` Templates
 
@@ -75,7 +75,13 @@ src/<pkg>/
     `.png` into `usr/share/applications` and `usr/share/pixmaps`.
   - Ensure `debhelper` is installed (`command -v dh`) before building.
 
-## 3. Verify & Publish
+## 3. Updating an Existing Package
+
+- **Upstream version bump** (new upstream `VERSION`): update `VERSION` / `UPSTREAM_URL` (if static) and reset `REVISION="1"`. Watch out for scripts that fetch `VERSION` dynamically (like `update-antigravity-cli.sh`): if `REVISION` was previously bumped, reset it back to `"1"` when `VERSION` changes.
+- **Packaging-only change** (editing `src/<pkg>/`, `postinst`/`postrm`, `.desktop`, icon, or `debian/*` for an already-published `VERSION`): bump `REVISION` (`1` → `2`, etc.) so `apt` sees an upgrade and does not hit cached checksum mismatches. (If the current `DEB_VERSION` has not been pushed/published yet, you may keep the same `REVISION`.)
+- **Clean up superseded artifacts**: before running `./make-indexes.sh`, remove superseded `.deb`, `.dsc`, `.debian.tar.xz`, and `.orig.tar.xz` files from `dists/` if you only want to serve the latest version/revision.
+
+## 4. Verify & Publish
 
 1. Run `./update-<pkg>.sh` and check exit code `0`.
 2. Inspect the `.deb`:
