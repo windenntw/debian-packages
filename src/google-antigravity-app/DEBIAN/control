@@ -1,5 +1,5 @@
 Package: google-antigravity-app
-Version: @VERSION@
+Version: @DEB_VERSION@
 Architecture: amd64
 Maintainer: windenntw <windenntw@gmail.com>
 Depends: curl, ca-certificates

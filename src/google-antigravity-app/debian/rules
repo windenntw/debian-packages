@@ -21,9 +21,9 @@ binary-arch:
 	install -m 0755 debian/postinst $(STAGE)/DEBIAN/postinst
 	install -m 0755 debian/postrm $(STAGE)/DEBIAN/postrm
 	install -d -m 0755 $(STAGE)/usr/share/pixmaps
-	install -m 0644 usr/share/pixmaps/google-antigravity-app.png $(STAGE)/usr/share/pixmaps/google-antigravity-app.png
+	install -m 0644 debian/usr/share/pixmaps/google-antigravity-app.png $(STAGE)/usr/share/pixmaps/google-antigravity-app.png
 	install -d -m 0755 $(STAGE)/usr/share/applications
-	install -m 0644 usr/share/applications/google-antigravity-app.desktop $(STAGE)/usr/share/applications/google-antigravity-app.desktop
+	install -m 0644 debian/usr/share/applications/google-antigravity-app.desktop $(STAGE)/usr/share/applications/google-antigravity-app.desktop
 	dpkg-gencontrol -p$(PKG) -P$(STAGE)
 	chmod 0644 $(STAGE)/DEBIAN/control
 	dpkg-deb --root-owner-group --build $(STAGE) ..

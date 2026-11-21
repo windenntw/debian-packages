@@ -1,4 +1,4 @@
-google-antigravity-app (@VERSION@) windenntw; urgency=medium
+google-antigravity-app (@DEB_VERSION@) windenntw; urgency=medium
 
   * Release @VERSION@ installer package.
 
