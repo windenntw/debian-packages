@@ -6,6 +6,8 @@ set -x
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 UPSTREAM_URL="https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.8.0-6733682917113856/linux-x64/Antigravity%20IDE.tar.gz"
 VERSION="2.8.0"
+REVISION="1"
+DEB_VERSION="${VERSION}-${REVISION}"
 DATE=$(LC_ALL=C date -R)
 
 # 1. Make temp staging directory.
@@ -13,7 +15,7 @@ TMPDIR=$(mktemp -d)
 ROOTDIR="${TMPDIR}/root"
 SRCDIR="${TMPDIR}/src/google-antigravity-ide-${VERSION}"
 INSTALLDIR="/opt/Antigravity-IDE-${VERSION}-linux-amd64"
-DEBNAME="google-antigravity-ide_${VERSION}_amd64.deb"
+DEBNAME="google-antigravity-ide_${DEB_VERSION}_amd64.deb"
 
 # 2. Register trap to cleanup.
 function cleanup1() {
@@ -29,6 +31,7 @@ render_template() {
     local content
     content=$(<"${src}")
     content=${content//@VERSION@/${VERSION}}
+    content=${content//@DEB_VERSION@/${DEB_VERSION}}
     content=${content//@UPSTREAM_URL@/${UPSTREAM_URL}}
     content=${content//@INSTALLDIR@/${INSTALLDIR}}
     content=${content//@DATE@/${DATE}}
@@ -50,7 +53,7 @@ chmod 0755 "${ROOTDIR}/DEBIAN/postrm"
 
 # 4. Stage the desktop entry and install the icon.
 mkdir -p "${ROOTDIR}/usr/share/pixmaps"
-cp "${SCRIPT_DIR}/icons/google-antigravity-ide.png" "${ROOTDIR}/usr/share/pixmaps/google-antigravity-ide.png"
+cp "${SRC_DIR}/usr/share/pixmaps/google-antigravity-ide.png" "${ROOTDIR}/usr/share/pixmaps/google-antigravity-ide.png"
 chmod 0644 "${ROOTDIR}/usr/share/pixmaps/google-antigravity-ide.png"
 
 mkdir -p "${ROOTDIR}/usr/share/applications"
@@ -66,10 +69,13 @@ mkdir -p "${OUTDIR}"
 dpkg-deb --root-owner-group --build "${ROOTDIR}" "${OUTDIR}/${DEBNAME}"
 dpkg -c "${OUTDIR}/${DEBNAME}"
 
-# 7. Build native Debian source package.
-mkdir -p "${SRCDIR}/debian/source" "${SRCDIR}/usr/share/applications" "${SRCDIR}/usr/share/pixmaps"
+# 7. Build Debian source package.
+mkdir -p "${SRCDIR}/debian/source" "${SRCDIR}/debian/usr/share/applications" "${SRCDIR}/debian/usr/share/pixmaps"
 cp "${SRC_DIR}/debian/source/format" "${SRCDIR}/debian/source/format"
 chmod 0644 "${SRCDIR}/debian/source/format"
+
+cp "${SRC_DIR}/debian/source/include-binaries" "${SRCDIR}/debian/source/include-binaries"
+chmod 0644 "${SRCDIR}/debian/source/include-binaries"
 
 render_template "${SRC_DIR}/debian/control" "${SRCDIR}/debian/control"
 chmod 0644 "${SRCDIR}/debian/control"
@@ -86,15 +92,17 @@ chmod 0755 "${SRCDIR}/debian/postinst"
 cp "${ROOTDIR}/DEBIAN/postrm" "${SRCDIR}/debian/postrm"
 chmod 0755 "${SRCDIR}/debian/postrm"
 
-cp "${ROOTDIR}/usr/share/applications/google-antigravity-ide.desktop" "${SRCDIR}/usr/share/applications/google-antigravity-ide.desktop"
-chmod 0644 "${SRCDIR}/usr/share/applications/google-antigravity-ide.desktop"
+cp "${ROOTDIR}/usr/share/applications/google-antigravity-ide.desktop" "${SRCDIR}/debian/usr/share/applications/google-antigravity-ide.desktop"
+chmod 0644 "${SRCDIR}/debian/usr/share/applications/google-antigravity-ide.desktop"
 
-cp "${SCRIPT_DIR}/icons/google-antigravity-ide.png" "${SRCDIR}/usr/share/pixmaps/google-antigravity-ide.png"
-chmod 0644 "${SRCDIR}/usr/share/pixmaps/google-antigravity-ide.png"
+cp "${SRC_DIR}/usr/share/pixmaps/google-antigravity-ide.png" "${SRCDIR}/debian/usr/share/pixmaps/google-antigravity-ide.png"
+chmod 0644 "${SRCDIR}/debian/usr/share/pixmaps/google-antigravity-ide.png"
 
+tar -cJf "${TMPDIR}/src/google-antigravity-ide_${VERSION}.orig.tar.xz" --files-from /dev/null
 (cd "${TMPDIR}/src" && dpkg-source -b "google-antigravity-ide-${VERSION}")
 
 SRC_OUTDIR="${SCRIPT_DIR}/dists/windenntw/windenntw/source"
 mkdir -p "${SRC_OUTDIR}"
-cp "${TMPDIR}/src/google-antigravity-ide_${VERSION}.dsc" "${SRC_OUTDIR}/"
-cp "${TMPDIR}/src/google-antigravity-ide_${VERSION}.tar.xz" "${SRC_OUTDIR}/"
+cp "${TMPDIR}/src/google-antigravity-ide_${DEB_VERSION}.dsc" "${SRC_OUTDIR}/"
+cp "${TMPDIR}/src/google-antigravity-ide_${DEB_VERSION}.debian.tar.xz" "${SRC_OUTDIR}/"
+cp "${TMPDIR}/src/google-antigravity-ide_${VERSION}.orig.tar.xz" "${SRC_OUTDIR}/"

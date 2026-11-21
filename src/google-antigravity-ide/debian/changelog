@@ -1,4 +1,4 @@
-google-antigravity-ide (@VERSION@) windenntw; urgency=medium
+google-antigravity-ide (@DEB_VERSION@) windenntw; urgency=medium
 
   * Release @VERSION@.
 
