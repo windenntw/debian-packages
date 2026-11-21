@@ -17,6 +17,10 @@ binary-arch:
 	install -d -m 0755 $(STAGING)/DEBIAN
 	install -m 0755 debian/postinst $(STAGING)/DEBIAN/postinst
 	install -m 0755 debian/postrm $(STAGING)/DEBIAN/postrm
+	install -d -m 0755 $(STAGING)/usr/share/pixmaps
+	install -m 0644 debian/usr/share/pixmaps/google-antigravity-cli.png $(STAGING)/usr/share/pixmaps/google-antigravity-cli.png
+	install -d -m 0755 $(STAGING)/usr/share/applications
+	install -m 0644 debian/usr/share/applications/google-antigravity-cli.desktop $(STAGING)/usr/share/applications/google-antigravity-cli.desktop
 	dpkg-gencontrol -p$(PKG) -P$(STAGING)
 	chmod 0644 $(STAGING)/DEBIAN/control
 	dpkg-deb --root-owner-group --build $(STAGING) ..

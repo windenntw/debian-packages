@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Antigravity CLI
+Comment=Antigravity command-line interface
+Exec=@BINARY_PATH@
+Icon=/usr/share/pixmaps/google-antigravity-cli.png
+Type=Application
+Categories=Development;Utility;ConsoleOnly;
+Terminal=true

@@ -26,7 +26,9 @@ fi
 TMPDIR=$(mktemp -d)
 ROOTDIR="${TMPDIR}/root"
 BINARY_PATH="/usr/bin/agy"
-DEBNAME="google-antigravity-cli_${VERSION}_amd64.deb"
+REVISION="1"
+DEB_VERSION="${VERSION}-${REVISION}"
+DEBNAME="google-antigravity-cli_${DEB_VERSION}_amd64.deb"
 
 # 2. Register trap to cleanup.
 function cleanup1() {
@@ -43,6 +45,7 @@ render_template() {
     local content
     content=$(<"${src}")
     content=${content//@VERSION@/${VERSION}}
+    content=${content//@DEB_VERSION@/${DEB_VERSION}}
     content=${content//@UPSTREAM_URL@/${UPSTREAM_URL}}
     content=${content//@SHA512@/${SHA512}}
     content=${content//@BINARY_PATH@/${BINARY_PATH}}
@@ -63,18 +66,28 @@ chmod 0755 "${ROOTDIR}/DEBIAN/postinst"
 render_template "${SRC_DIR}/DEBIAN/postrm" "${ROOTDIR}/DEBIAN/postrm"
 chmod 0755 "${ROOTDIR}/DEBIAN/postrm"
 
-# 4. List files.
+# 4. Install desktop entry and icon.
+mkdir -p "${ROOTDIR}/usr/share/pixmaps"
+cp "${SRC_DIR}/usr/share/pixmaps/google-antigravity-cli.png" "${ROOTDIR}/usr/share/pixmaps/google-antigravity-cli.png"
+chmod 0644 "${ROOTDIR}/usr/share/pixmaps/google-antigravity-cli.png"
+
+mkdir -p "${ROOTDIR}/usr/share/applications"
+render_template "${SRC_DIR}/usr/share/applications/google-antigravity-cli.desktop" \
+    "${ROOTDIR}/usr/share/applications/google-antigravity-cli.desktop"
+chmod 0644 "${ROOTDIR}/usr/share/applications/google-antigravity-cli.desktop"
+
+# 5. List files.
 find "${ROOTDIR}"
 
-# 5. Make package and show the content.
+# 6. Make package and show the content.
 OUTDIR="${SCRIPT_DIR}/dists/windenntw/windenntw/binary-amd64"
 mkdir -p "${OUTDIR}"
 dpkg-deb --root-owner-group --build "${ROOTDIR}" "${OUTDIR}/${DEBNAME}"
 dpkg -c "${OUTDIR}/${DEBNAME}"
 
-# 6. Stage and build Debian native source package.
+# 7. Stage and build Debian source package.
 SRCDIR="${TMPDIR}/google-antigravity-cli-${VERSION}"
-mkdir -p "${SRCDIR}/debian/source"
+mkdir -p "${SRCDIR}/debian/source" "${SRCDIR}/debian/usr/share/pixmaps" "${SRCDIR}/debian/usr/share/applications"
 chmod 0755 "${SRCDIR}" "${SRCDIR}/debian" "${SRCDIR}/debian/source"
 
 render_template "${SRC_DIR}/debian/control" "${SRCDIR}/debian/control"
@@ -86,6 +99,9 @@ chmod 0644 "${SRCDIR}/debian/changelog"
 cp "${SRC_DIR}/debian/source/format" "${SRCDIR}/debian/source/format"
 chmod 0644 "${SRCDIR}/debian/source/format"
 
+cp "${SRC_DIR}/debian/source/include-binaries" "${SRCDIR}/debian/source/include-binaries"
+chmod 0644 "${SRCDIR}/debian/source/include-binaries"
+
 cp "${SRC_DIR}/debian/rules" "${SRCDIR}/debian/rules"
 chmod 0755 "${SRCDIR}/debian/rules"
 
@@ -95,8 +111,17 @@ chmod 0755 "${SRCDIR}/debian/postinst"
 cp "${ROOTDIR}/DEBIAN/postrm" "${SRCDIR}/debian/postrm"
 chmod 0755 "${SRCDIR}/debian/postrm"
 
+cp "${SRC_DIR}/usr/share/pixmaps/google-antigravity-cli.png" "${SRCDIR}/debian/usr/share/pixmaps/google-antigravity-cli.png"
+chmod 0644 "${SRCDIR}/debian/usr/share/pixmaps/google-antigravity-cli.png"
+
+cp "${ROOTDIR}/usr/share/applications/google-antigravity-cli.desktop" "${SRCDIR}/debian/usr/share/applications/google-antigravity-cli.desktop"
+chmod 0644 "${SRCDIR}/debian/usr/share/applications/google-antigravity-cli.desktop"
+
 SOURCE_OUTDIR="${SCRIPT_DIR}/dists/windenntw/windenntw/source"
 mkdir -p "${SOURCE_OUTDIR}"
+tar -cJf "${TMPDIR}/google-antigravity-cli_${VERSION}.orig.tar.xz" --files-from /dev/null
 (cd "${TMPDIR}" && dpkg-source -b "google-antigravity-cli-${VERSION}")
-mv "${TMPDIR}/google-antigravity-cli_${VERSION}.dsc" "${SOURCE_OUTDIR}/"
-mv "${TMPDIR}/google-antigravity-cli_${VERSION}.tar.xz" "${SOURCE_OUTDIR}/"
+mv "${TMPDIR}/google-antigravity-cli_${DEB_VERSION}.dsc" \
+   "${TMPDIR}/google-antigravity-cli_${DEB_VERSION}.debian.tar.xz" \
+   "${TMPDIR}/google-antigravity-cli_${VERSION}.orig.tar.xz" \
+   "${SOURCE_OUTDIR}/"
