@@ -1,0 +1,7 @@
+Package: google-antigravity-cli
+Version: @VERSION@
+Architecture: amd64
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates
+Description: Antigravity CLI from Google (installer).
+ Downloads and installs Antigravity CLI (agy) from Google during package installation.

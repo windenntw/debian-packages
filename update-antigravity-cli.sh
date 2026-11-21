@@ -34,65 +34,31 @@ function cleanup1() {
 }
 trap cleanup1 EXIT
 
-# 3. Create control file and maintainer scripts for Debian.
+# 3. Stage control file and maintainer scripts for Debian.
+shopt -u patsub_replacement 2>/dev/null || true
+render_template() {
+    local src="$1"
+    local dst="$2"
+    local content
+    content=$(<"${src}")
+    content=${content//@VERSION@/${VERSION}}
+    content=${content//@UPSTREAM_URL@/${UPSTREAM_URL}}
+    content=${content//@SHA512@/${SHA512}}
+    content=${content//@BINARY_PATH@/${BINARY_PATH}}
+    printf '%s\n' "${content}" > "${dst}"
+}
+
+SRC_DIR="${SCRIPT_DIR}/src/google-antigravity-cli"
 mkdir -p "${ROOTDIR}/DEBIAN"
 chmod 0755 "${ROOTDIR}/DEBIAN"
-cat <<EOF > "${ROOTDIR}/DEBIAN/control"
-Package: google-antigravity-cli
-Version: ${VERSION}
-Architecture: amd64
-Maintainer: windenntw <windenntw@gmail.com>
-Depends: curl, ca-certificates
-Description: Antigravity CLI from Google (installer).
- Downloads and installs Antigravity CLI (agy) from Google during package installation.
-EOF
+
+render_template "${SRC_DIR}/DEBIAN/control" "${ROOTDIR}/DEBIAN/control"
 chmod 0644 "${ROOTDIR}/DEBIAN/control"
 
-cat <<EOF > "${ROOTDIR}/DEBIAN/postinst"
-#!/bin/sh
-set -e
-
-case "\$1" in
-    configure)
-        TMPDIR=\$(mktemp -d)
-        trap 'rm -rf "\$TMPDIR"' EXIT
-
-        echo "Downloading Antigravity CLI ${VERSION}..."
-        PAYLOAD="\${TMPDIR}/payload"
-        curl -fSL "${UPSTREAM_URL}" -o "\${PAYLOAD}"
-
-        ACTUAL_HASH=\$(sha512sum "\${PAYLOAD}" | cut -d' ' -f1)
-        if [ "\${ACTUAL_HASH}" != "${SHA512}" ]; then
-            echo "Checksum verification failed for Antigravity CLI ${VERSION}" >&2
-            exit 1
-        fi
-
-        case "${UPSTREAM_URL}" in
-            *.tar.gz*)
-                tar --no-same-owner -xzf "\${PAYLOAD}" -C "\${TMPDIR}" antigravity
-                install -d -m 0755 "$(dirname "${BINARY_PATH}")"
-                install -m 0755 -o root -g root "\${TMPDIR}/antigravity" "${BINARY_PATH}"
-                ;;
-            *)
-                install -d -m 0755 "$(dirname "${BINARY_PATH}")"
-                install -m 0755 -o root -g root "\${PAYLOAD}" "${BINARY_PATH}"
-                ;;
-        esac
-        ;;
-esac
-EOF
+render_template "${SRC_DIR}/DEBIAN/postinst" "${ROOTDIR}/DEBIAN/postinst"
 chmod 0755 "${ROOTDIR}/DEBIAN/postinst"
 
-cat <<EOF > "${ROOTDIR}/DEBIAN/postrm"
-#!/bin/sh
-set -e
-
-case "\$1" in
-    remove|purge|upgrade)
-        rm -f "${BINARY_PATH}"
-        ;;
-esac
-EOF
+render_template "${SRC_DIR}/DEBIAN/postrm" "${ROOTDIR}/DEBIAN/postrm"
 chmod 0755 "${ROOTDIR}/DEBIAN/postrm"
 
 # 4. List files.
