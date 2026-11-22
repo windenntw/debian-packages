@@ -111,6 +111,24 @@ SHA512: c398a6e42dd95a06b3d90feb112ee4c9532261cb5180ac773e964bd9a4242b0454f5827a
 Homepage: https://github.com/gasman/hdfmonkey
 Description: A Swiss Army Knife for working with FAT partitions on Spectrum emulator HDF images.
 
+Package: ollama
+Architecture: amd64
+Version: 0.40.17-1
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates, zstd
+Recommends: pciutils
+Suggests: nvidia-driver | cuda-drivers
+Filename: dists/windenntw/windenntw/binary-amd64/ollama_0.40.17-1_amd64.deb
+Size: 80308
+MD5sum: fcad2896bba43703d2a8a57b1be2779c
+SHA1: 5905f2f8d51015a5028ffb88311fd9cd0d09c589
+SHA256: 274842270c4c359cd01e1d083f5e1467abc3fd44a7da7b444ee2c107373ac8ab
+SHA512: f2beff3953728c06e3cde9bf75ac1dec28a2ac0d98386d56f7a4640827ce7ba9e9600bd99b5cf45c554bb6178d81f98fb562b5fe6f6c70fa0610c4d80e67e8a7
+Description: Ollama - get up and running with large language models (installer).
+ Downloads and installs Ollama during package installation, configures the
+ ollama system user and systemd service, and installs AMD ROCm libraries
+ when an AMD GPU is detected.
+
 Package: taptools-dbgsym
 Architecture: amd64
 Version: 1.0.4

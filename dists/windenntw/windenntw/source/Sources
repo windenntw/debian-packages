@@ -109,6 +109,34 @@ Checksums-Sha512:
  9defe82afd6af50873cb75b61a0a04704a405343e6fbf193bcff85d37f99ab3885bdcd47d9cd861a99dff6ee5bcba7e70eef53853ccfd9067aaffa2a17d8f207 660 hdfmonkey_0.4.1.dsc
  b2c47f8c019d9474d04a54983dee082f129ee16d2353a8404951fa856dec34a8ba178f3fdfdbb6b4f093912d1d8264cbae59ced59bc665df02ffedf5695d8a93 51228 hdfmonkey_0.4.1.tar.xz
 
+Package: ollama
+Format: 3.0 (quilt)
+Binary: ollama
+Architecture: amd64
+Version: 0.40.17-1
+Maintainer: windenntw <windenntw@gmail.com>
+Standards-Version: 4.6.2
+Build-Depends: debhelper-compat (= 13)
+Directory: dists/windenntw/windenntw/source
+Package-List:
+ ollama deb devel optional arch=amd64
+Files:
+ e6459115cd5f83f76f63c49367cfb071 778 ollama_0.40.17-1.dsc
+ 67c9bee4cfbf63ada12eb111ee35d59d 116 ollama_0.40.17.orig.tar.xz
+ dee34ea096f6612f831eeab5d307156a 80200 ollama_0.40.17-1.debian.tar.xz
+Checksums-Sha1:
+ 58d2e483f55550286fd2d31a1a54df651456904c 778 ollama_0.40.17-1.dsc
+ f0ae0f853b571fc4a392d574cbec58a760ba1bba 116 ollama_0.40.17.orig.tar.xz
+ dbfd935bffc3e9799cac35c8d50322c4f11bd7f2 80200 ollama_0.40.17-1.debian.tar.xz
+Checksums-Sha256:
+ 792b3ebfc3ea628e898df34d6913daf6ddcde49cd4659357ce5fe32015bbccd2 778 ollama_0.40.17-1.dsc
+ 83bdfcdb94f595ba525eb869997187e9898d4201cd3c7655a19da71e7d59c125 116 ollama_0.40.17.orig.tar.xz
+ 47ca7ad68cfc89b62d558bfd77008d030337a19b60628a64849b42868237d314 80200 ollama_0.40.17-1.debian.tar.xz
+Checksums-Sha512:
+ c139e738c227f20f57e7cc93339e865fd833e297e79239f81501bb38e2448a5f2d3cdb84f6f7f1d14f58967f134b5594664e9fa8e394a2bfc9d84f0d07fd4fe7 778 ollama_0.40.17-1.dsc
+ 5888d49229b8f49b9deaf1399dbd3d9bd727918fb904d3e4db8c65d4575f3e199c436b580034bc2e97100ecb090f53b566d558c666c13d34bb6e683487f83e13 116 ollama_0.40.17.orig.tar.xz
+ 88bbe50570df1bf1fc64c97c84a70aaee38c0e8997ddc5c28d8153f1763cf861b185b1de620bc023bfe239fd7dfea7c311bea7c0c030b6386de8388bd975f798 80200 ollama_0.40.17-1.debian.tar.xz
+
 Package: taptools
 Format: 3.0 (native)
 Binary: taptools

@@ -1,32 +1,32 @@
 Architectures: amd64
 Codename: windenntw
 Components: windenntw
-Date: Sat, 21 Nov 2026 15:19:21 +0000
+Date: Sun, 22 Nov 2026 11:53:03 +0000
 Description: windenntw Debian Packages
 Label: windenntw
 Origin: windenntw
 Suite: windenntw
 MD5Sum:
- 0f24b9ec3a17192f567c224c8062e847              192 Release
- b0a0998b1cb3c8648be7f2111a272bdb             9996 windenntw/binary-amd64/Packages
- 4ff7b09cbd35918c290c09b59cf28d45             4041 windenntw/binary-amd64/Packages.gz
- c2e062ec7599931ec09eb4671b004c23             7824 windenntw/source/Sources
- 6a0a603c30f9178a69ab8fda844547a3             2661 windenntw/source/Sources.gz
+ 129086f59f075864e4392f57291cb6e9              192 Release
+ e0d40975ca134c3d5685c8ee596bbfde            10838 windenntw/binary-amd64/Packages
+ 032c9d45553f000869ffaa7ec215474b             4407 windenntw/binary-amd64/Packages.gz
+ 3dea1c4c5d29021294c9fb3c60370b6f             9366 windenntw/source/Sources
+ 43e0f53018be0855d9e547f300d4378a             3077 windenntw/source/Sources.gz
 SHA1:
- 886f34197fe38400e53234b63f7bf8f317eff4df              192 Release
- 88447246dbcb89fa09b5b0fae246bde0d8d17fd8             9996 windenntw/binary-amd64/Packages
- 8f5217c0ba542348d4a942ac64f9b67f5d8a9d38             4041 windenntw/binary-amd64/Packages.gz
- bda25ffe41435f6f691ce6407eb744b3d8ef2443             7824 windenntw/source/Sources
- 1eb1ba09f081fe45bb77723b998981a891414992             2661 windenntw/source/Sources.gz
+ 1af4fcd6dcb53c9300f7110348d75f7369b286d8              192 Release
+ e3a51e523b3f9fef57d07f03126899b891335d5d            10838 windenntw/binary-amd64/Packages
+ 6a58729ac848a25a7c8fe8ba5833dacf8a69a9f1             4407 windenntw/binary-amd64/Packages.gz
+ 1b31791d9032a8d5ed91fc4c520c68709ace1e35             9366 windenntw/source/Sources
+ a6adaac69c5b44bc799cea7881f8a758f5779199             3077 windenntw/source/Sources.gz
 SHA256:
- ef6243cfb91e62cafff856ad70866782b51e28da2347a0019524cc726bb2bf42              192 Release
- 4ed9d291e80c4eee81f6835390277c4904e74e47e68a9b035da008b2eb86134f             9996 windenntw/binary-amd64/Packages
- b3e7efe830a90b786b3bf87a1f345824b1fb42461ea1ce8acd5ea493738c002b             4041 windenntw/binary-amd64/Packages.gz
- 78289aa270b0420bd810f106b32ec9cd492a7b9a845c67c5e4641fba06aaa22a             7824 windenntw/source/Sources
- f3546c630ab141af28c90e430988d7b495d9fe64aa004c351991b777ffd48b5c             2661 windenntw/source/Sources.gz
+ a8d920e7455d09de8de20a560e6ce7728fc8db21cdeb5d1dafae79550cab950d              192 Release
+ 3ebb20a8a25a14b0a1f07004d5d2d24b2601110f66a5f25d55e71f79a1723dd0            10838 windenntw/binary-amd64/Packages
+ 455ff1412ac1550ce54b23c7687dfc42d9164b30fbd6da40ef156a0ea656916a             4407 windenntw/binary-amd64/Packages.gz
+ e4951097b43a7ab7a813532f2dd94d89c893d0397ae15aacd89f6dae512ff3b4             9366 windenntw/source/Sources
+ eb42e799c0e682ea40f9cc7c4b286e0973d021173c90b098a3059099dd4145aa             3077 windenntw/source/Sources.gz
 SHA512:
- 8c59500ffa4f4b654f4f6122dab92f2368ebd7f845644099afa532fe703ed5375f6f637c14cb31d616fb1b161406175694fa0da10c8746cc5a9f4ee03bf8ffd4              192 Release
- 9f4c286579d8153d8f5c6c27275a89d4133d54b9b2a36743aebdea7a9c642a8357a39eeebaa67a89cd9c57b90bbb54a8998611fd7f31768db6da92187293e623             9996 windenntw/binary-amd64/Packages
- d2f091740c1e4607fa51e428a294cf593c02744c0d3e3d483710420576a498970a5c3eb124c955cddd2d9e7cb4198a536bab678a660569a8e47e08f7987ac31a             4041 windenntw/binary-amd64/Packages.gz
- b70cfe794ea81e84dffb597725e6843f5544c5e733cd05d8292b681135d52a96789b0144a7d7edd07704739f8bbe05f3d43ab3901af911840a795aed65fbd4d5             7824 windenntw/source/Sources
- 1a4a468d381e57afe734a776f94a5ed13064c6f67eb902fc720baa493c9318e00d21a72dc166608ce45a0d072b1701b6c527322fde45e931386efc2dfb2792ca             2661 windenntw/source/Sources.gz
+ 5a62e3bbced40e5fc0040759f7dfc95421c7ea19130bec569475eb86f233e5a5e73f8eb1f051e2fae91a020186ebb41024f07742a2a81f902cd0d7e1dd27df0b              192 Release
+ e6957d85eaafee6577c768a703ba59e58f27b4a5b8d140ea8c5b3b90dadfab341209d13d05d4f3770ca44bbebef9a0fd1fddc06253fa54add86ce97c4cb72491            10838 windenntw/binary-amd64/Packages
+ 64c2a40d9c17c54ea352a4050caa15935a993985d9a9b84afead8a7f42dc285ed941d989331ca156d791765ef0e7f4ceefae4b9f0ff222258d87d4ea801e0630             4407 windenntw/binary-amd64/Packages.gz
+ d924693129383c3d46039afaa23318b121a555432242c9190ba23e66481d25c59668b6b39b72ec9107d943111b64bba2945ab1c63ee0c43a3bf22244da824658             9366 windenntw/source/Sources
+ 8e8e46ecf0d9663c5fd0befcfd390a09fca3f61bffda245481ef44657d18b2de36b7700d4686914d4c2ff9619e007a3ae7cc08b6546044c227b6de7bd7e519db             3077 windenntw/source/Sources.gz
