@@ -1,0 +1,5 @@
+ollama (@DEB_VERSION@) windenntw; urgency=medium
+
+  * Release @VERSION@.
+
+ -- windenntw <windenntw@gmail.com>  @DATE@

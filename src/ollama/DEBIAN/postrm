@@ -1,0 +1,28 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    remove|purge|upgrade)
+        if command -v systemctl >/dev/null 2>&1; then
+            case "$(systemctl is-system-running 2>/dev/null || true)" in
+                running|degraded)
+                    if [ "$1" != "upgrade" ]; then
+                        systemctl stop ollama 2>/dev/null || true
+                        systemctl disable ollama 2>/dev/null || true
+                    fi
+                    ;;
+            esac
+        fi
+
+        rm -f "@BINARY_PATH@" /etc/systemd/system/ollama.service
+        rm -rf /usr/lib/ollama
+
+        if command -v systemctl >/dev/null 2>&1; then
+            case "$(systemctl is-system-running 2>/dev/null || true)" in
+                running|degraded)
+                    systemctl daemon-reload || true
+                    ;;
+            esac
+        fi
+        ;;
+esac

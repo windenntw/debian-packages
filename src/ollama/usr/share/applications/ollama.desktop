@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ollama
+Comment=Run large language models locally
+Exec=@BINARY_PATH@
+Icon=/usr/share/pixmaps/ollama.png
+Type=Application
+Categories=Development;Utility;ConsoleOnly;
+Terminal=true

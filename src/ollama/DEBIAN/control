@@ -1,0 +1,11 @@
+Package: ollama
+Version: @DEB_VERSION@
+Architecture: amd64
+Maintainer: windenntw <windenntw@gmail.com>
+Depends: curl, ca-certificates, zstd
+Recommends: pciutils
+Suggests: nvidia-driver | cuda-drivers
+Description: Ollama - get up and running with large language models (installer).
+ Downloads and installs Ollama during package installation, configures the
+ ollama system user and systemd service, and installs AMD ROCm libraries
+ when an AMD GPU is detected.
