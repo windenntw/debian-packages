@@ -1,17 +1,17 @@
 Package: amiberry
 Architecture: amd64
-Version: 8.1.6+trixie
+Version: 8.5.0+trixie
 Priority: optional
 Section: otherosfs
 Maintainer: Dimitris Panokostas <midwan@gmail.com>
-Installed-Size: 44338
-Depends: libc6, libstdc++6, libsdl3-0, libsdl3-image0, flac, libmpg123-0, libpng16-16, zlib1g, libcurl4, libzstd1, libserialport0, libportmidi0, libenet7, libmpeg2-4, libpcap0.8, libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libdbus-1-3 (>= 1.10), libenet7, libflac14 (>= 1.5.0), libgcc-s1 (>= 3.0), libgl1, libmpeg2-4 (>= 0.5.1), libpcap0.8t64 (>= 0.9.8), libpng16-16t64 (>= 1.6.46), libportmidi0, libsdl3-0 (>= 3.2.0), libsdl3-image0 (>= 3.2.0), libserialport0 (>= 0.1.1), libstdc++6 (>= 14), libwayland-client0 (>= 1.20.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4)
-Filename: dists/windenntw/windenntw/binary-amd64/amiberry_8.1.6+trixie_amd64.deb
-Size: 17584710
-MD5sum: 011588699fda7ff23c8d265863438ce1
-SHA1: 9f1aa4c3de9abad09d367887bcaf8442b673313c
-SHA256: 3de899f110ce1becfd5dad0be14b86aa394654d99c1e76ccdfa39cb7a8e767a7
-SHA512: e370c64a5884e64d84bbec4327ce96f063660025c016110e3c3c9276cbc3184622bf357ed044051e27674b22d85ce0ec02d15bc4b2c656759bdeb4e698632e20
+Installed-Size: 64278
+Depends: libc6, libstdc++6, libsdl3-0, libsdl3-image0, flac, libpng16-16, zlib1g, libcurl4, libglib2.0-0, libmpg123-0, libzstd1, libserialport0, libenet7, libmpeg2-4, libpcap0.8, libavcodec61 (>= 7:7.1.5) | libavcodec-extra61 (>= 7:7.1.5), libavformat61 (>= 7:7.1.5) | libavformat-extra61 (>= 7:7.1.5), libavutil59 (>= 7:7.1.5), libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libdbus-1-3 (>= 1.10), libenet7, libflac14 (>= 1.5.0), libgcc-s1 (>= 3.0), libgl1, libglib2.0-0t64 (>= 2.78.0), libmpeg2-4 (>= 0.5.1), libmpg123-0t64 (>= 1.28.0), libpcap0.8t64 (>= 0.9.8), libpng16-16t64 (>= 1.6.46), libportmidi0, libsdl3-0 (>= 3.2.0), libsdl3-image0 (>= 3.2.0), libserialport0 (>= 0.1.1), libstdc++6 (>= 14), libswresample5 (>= 7:7.1.5), libswscale8 (>= 7:7.1.5), libwayland-client0 (>= 1.20.0), libwebp7 (>= 1.5.0), libwebpdemux2 (>= 1.5.0), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.2.0)
+Filename: dists/windenntw/windenntw/binary-amd64/amiberry_8.5.0+trixie_amd64.deb
+Size: 23056172
+MD5sum: 770f773411d93ba28e8a1783b3e710b6
+SHA1: 9d0600b9137f109fe0dcd847f5c13141eb95335f
+SHA256: a2539982f2c83755f4243784a7d4aed858b9eaf482743c2552190ea6905bb1cb
+SHA512: c3c07a43729761517462beb333821534445e96716b6aed432c0a6af68c212469836ad6634472d904c159124e1954c525eefd7d355ec5f10e76d1ab4a946cdc0b
 Homepage: https://amiberry.com
 Description: Optimized Amiga emulator for various platforms
  Optimized Amiga emulator for various ARM64, AMD64 and RISC-V platforms.
